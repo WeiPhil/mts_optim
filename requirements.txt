@@ -1,0 +1,12 @@
+numpy==2.2.4
+mitsuba==3.6.4
+drjit==1.0.5
+matplotlib==3.10.1
+gin-config==0.5.0
+tqdm==4.67.1
+mediapy==1.2.2
+colorcet==3.1.0
+scipy==1.15.2
+cholespy==2.1.0
+ipywidgets==8.1.7
+ipykernel==6.29.5
