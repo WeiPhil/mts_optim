@@ -18,6 +18,13 @@ from collections.abc import Callable
 
 import numpy as np
 
+def constant(start_iteration, steps, default_value = -1):
+  return (
+    lambda i :
+    default_value if i < start_iteration else (
+        i if i % steps == 0 else default_value)
+  ) 
+    
 
 def exponential(
     target_value: int | float,
