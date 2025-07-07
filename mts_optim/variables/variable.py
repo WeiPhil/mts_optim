@@ -207,6 +207,10 @@ class Variable(metaclass=abc.ABCMeta):
                 ):
                     parameters[key] = dr.unravel(
                         type(parameters[key]), value.array)
+                # Special case if the optimizer holds a Dr.Jit fixed-size array, but we actually
+                # need a Float array
+                elif type(parameters[key]) != type(value):
+                    parameters[key] = dr.ravel(value)
                 else:
                     parameters[key] = value
 
